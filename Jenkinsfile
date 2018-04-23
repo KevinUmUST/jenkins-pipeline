@@ -11,10 +11,10 @@ pipeline {
     stages {
 
         stage('GetInstances') {
-        
+          sh 'echo hello' 
         }
         stage('CreateInstance'){
-
+          sh 'echo world'
         }
     }
 }
