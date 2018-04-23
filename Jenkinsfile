@@ -8,13 +8,17 @@ node('linux') {
 }
 
 pipeline {
+    agent any
     stages {
-
         stage('GetInstances') {
-          sh 'echo hello' 
+            steps {
+                sh 'echo "hello"' 
+            }
         }
         stage('CreateInstance'){
-          sh 'echo world'
+            steps{
+                sh 'echo "world"'
+            }
         }
     }
 }
