@@ -12,8 +12,8 @@ pipeline {
     stages {
         stage('GetInstances') {
             steps {
-                sh 'echo "hello"' 
-            }
+                sh "aws ec2 describe-instances --region us-east-1"
+          }
         }
         stage('CreateInstance'){
             steps{
